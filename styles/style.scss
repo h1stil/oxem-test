@@ -1,0 +1,29 @@
+@import "./header";
+@import "./slider";
+@import "./calc";
+@import "./inputSlider";
+@import "./modal";
+@import "./burger";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
+}

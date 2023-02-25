@@ -1,0 +1,201 @@
+.calc {
+  .calc__title {
+    max-width: 753px;
+    color: #111111;
+    @include large-text;
+    margin: 100px 0 32px 0;
+  }
+  .calc__setting {
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .setting__title {
+        @include small-text;
+        color: #575757;
+        margin-bottom: 24px;
+      }
+      .wrapper__input {
+        position: relative;
+        .setting__value {
+          background: #f3f3f4;
+          border-radius: 16px;
+          border: none;
+          padding: 16px 24px;
+          @include medium-text;
+          color: #575757;
+          &:focus {
+            background-color: #fff;
+            outline: 2px solid #f3f3f4;
+          }
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          transform: translate(0, -50%);
+          @include medium-text;
+          color: #575757;
+        }
+        #input-initial__amout {
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          transform: translate(0, -50%);
+          font-size: 20px;
+          color: #575757;
+        }
+      }
+    }
+  }
+  .calc__result {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 135px;
+    flex-wrap: wrap;
+    gap: 44px;
+    .result__container {
+      display: flex;
+      align-items: center;
+      gap: 180px;
+      margin-right: 170px;
+    }
+    .result__title {
+      color: #575757;
+      @include small-text;
+      margin-top: 44px;
+    }
+    p {
+      color: #575757;
+      @include large-text;
+    }
+    button {
+      padding: 8px 16px 12px;
+      background: #ff9514;
+      border-radius: 40px;
+      border: none;
+      padding: 14px 92.5px 18px;
+      color: #fff;
+      @include medium-text;
+      @include button-color;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .calc {
+    .calc__title {
+      margin: 80px 0 44px 0;
+    }
+    .calc__setting {
+      form {
+        flex-direction: column;
+        gap: 32px;
+        label {
+          width: 100%;
+        }
+        .wrapper__input .setting__value {
+          width: 100%;
+        }
+      }
+    }
+    .calc__result {
+      .result__container {
+        gap: 201px;
+        margin-right: auto;
+      }
+      button {
+        padding: 14px 52px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .calc {
+    .calc__title {
+      margin: 80px 0 38px 0;
+    }
+    .calc__setting {
+      form {
+        flex-direction: column;
+        gap: 32px;
+        label {
+          width: 100%;
+        }
+        .wrapper__input .setting__value {
+          width: 100%;
+        }
+      }
+    }
+    .calc__result {
+      .result__container {
+        gap: 85px;
+        width: 100%;
+        margin-right: auto;
+      }
+      button {
+        padding: 14px 52px 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main .wrapper section:not(:nth-child(1)) {
+    padding: 0 20px;
+  }
+  .calc {
+    .calc__title {
+      font-size: 34px;
+      margin: 64px 0 32px 0;
+    }
+    .calc__setting {
+      form {
+        flex-direction: column;
+        gap: 32px;
+        label {
+          width: 100%;
+        }
+        .wrapper__input .setting__value {
+          width: 100%;
+          padding: 20px;
+          font-size: 22px;
+          line-height: 20px;
+        }
+        .setting__title {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .calc__result {
+      margin-bottom: 0;
+      gap: 0;
+      .result__container {
+        flex-direction: column;
+        gap: 13px;
+        align-items: start;
+        width: 100%;
+        margin-right: auto;
+      }
+      button {
+        padding: 18px 52px 22px;
+        font-size: 22px;
+        line-height: 20px;
+        display: block;
+        margin: 32px auto 47px;
+      }
+      .result__title {
+        font-size: 14px;
+        line-height: 136%;
+        margin-top: 16px;
+      }
+      p {
+        font-size: 22px;
+        line-height: 20px;
+      }
+    }
+  }
+}

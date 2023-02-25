@@ -1,0 +1,78 @@
+@mixin small-strong-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin large-text {
+  font-family: "Nekst-Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+}
+
+@mixin small-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin medium-text {
+  font-family: "Nekst-Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+@mixin button-color {
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: #111111;
+  }
+  &:active {
+    background: #575757;
+  }
+  &:disabled {
+    cursor: inherit;
+    background: rgba(255, 149, 20);
+    border: none;
+    opacity: 0.4;
+  }
+}
+
+@mixin button-light {
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: #ff9514;
+    color: #fff;
+  }
+  &:active {
+    background: #ffa83d;
+    color: #fff;
+  }
+  &:disabled {
+    opacity: 0.4;
+    color: #fff;
+
+    border: 1px solid #ff9514;
+  }
+}
+
+@mixin link {
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    color: #ff9514;
+  }
+  &:active {
+    color: #ffa83d;
+  }
+}
